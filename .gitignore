@@ -1,0 +1,6 @@
+# Dotenv file
+.env
+
+# misc
+.vscode
+.DS_Store
