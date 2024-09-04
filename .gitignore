@@ -4,3 +4,5 @@
 # misc
 .vscode
 .DS_Store
+Week1/coverage
+Week1/lcov.info
