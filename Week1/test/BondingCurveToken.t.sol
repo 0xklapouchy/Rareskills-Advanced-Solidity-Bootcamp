@@ -5,12 +5,9 @@ import { Test, console } from "forge-std/Test.sol";
 import { BondingCurveToken } from "../src/BondingCurveToken.sol";
 
 contract BondingCurveTokenTest is Test {
-    event Transfer(address indexed from, address indexed to, uint256 value);
-
     BondingCurveToken public bct;
     address owner;
     address alice;
-    address bob;
 
     uint256 constant SLOPE = 0.5 ether;
     uint256 constant INTERCEPT = 0.1 ether;
@@ -18,7 +15,6 @@ contract BondingCurveTokenTest is Test {
     function setUp() public {
         bct = new BondingCurveToken(SLOPE, INTERCEPT);
         alice = makeAddr("alice");
-        bob = makeAddr("bob");
     }
 
     function test_buyTokens_Will_Revert_On_Zero_Amount() public {
