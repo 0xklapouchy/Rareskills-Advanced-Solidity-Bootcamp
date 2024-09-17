@@ -44,7 +44,7 @@ contract NFTStakingTest is Test {
         nft.mint{value: 0.1 ether}(bob);
     }
 
-    function test_Deploy() public {
+    function test_Deploy() public view {
         assertEq(staking.owner(), address(this));
         assertEq(rewardToken.owner(), address(staking));
         assertEq(rewardToken.totalSupply(), 0);

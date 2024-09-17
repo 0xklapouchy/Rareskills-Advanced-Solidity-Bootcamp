@@ -35,7 +35,7 @@ contract NFTWithDiscountTest is Test {
         vm.deal(bob, 5 ether);
     }
 
-    function test_Deploy() public {
+    function test_Deploy() public view {
         assertEq(nft.owner(), address(this));
         assertEq(nft.merkleRoot(), merkleTree[0]);
         assertEq(nft.totalSupply(), 0);
