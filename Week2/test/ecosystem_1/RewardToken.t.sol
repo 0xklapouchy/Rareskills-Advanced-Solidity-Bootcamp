@@ -11,15 +11,12 @@ contract RewardTokenTest is Test {
     RewardToken public rt;
     address owner;
     address alice;
-    address bob;
-
-    bytes32[] public merkleTree;
 
     function setUp() public {
         owner = address(this);
         alice = makeAddr("alice"); // 0x328809Bc894f92807417D2dAD6b7C998c1aFdac6
 
-        rt = new RewardToken(owner);
+        rt = new RewardToken();
     }
 
     function test_Mint_If_Owner() public {

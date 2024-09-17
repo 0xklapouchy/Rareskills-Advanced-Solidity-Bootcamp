@@ -10,9 +10,7 @@ contract RewardToken is Ownable, ERC20("RewardToken", "RT") {
     // Constructor
     // -----------------------------------------------------------------------
 
-    constructor(
-        address nftStaking
-    ) Ownable(nftStaking) {}
+    constructor() Ownable(msg.sender) {}
 
     // -----------------------------------------------------------------------
     // Owner functions
